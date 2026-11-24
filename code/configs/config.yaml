@@ -1,0 +1,8 @@
+# Base configuration
+model_name: "gpt2"
+max_new_tokens: 50
+carbon_intensity: 0.233
+seed: 42
+repetitions: 10  # Number of repetitions per configuration
+warmup_runs: 1
+max_input_tokens: 512

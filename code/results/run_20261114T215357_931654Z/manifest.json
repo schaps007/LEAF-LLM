@@ -1,0 +1,59 @@
+{
+  "config": {
+    "model_name": "gpt2",
+    "max_new_tokens": 50,
+    "carbon_intensity": 0.233,
+    "seed": 42,
+    "repetitions": 10,
+    "warmup_runs": 1,
+    "max_input_tokens": 512
+  },
+  "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+  "packages": {
+    "torch": "2.7.1",
+    "transformers": "4.55.0",
+    "codecarbon": "3.2.3",
+    "numpy": "2.0.2",
+    "pandas": "2.2.3",
+    "scipy": "1.13.1",
+    "bitsandbytes": "0.48.2",
+    "accelerate": "1.10.1"
+  },
+  "baseline": {
+    "model": "gpt2",
+    "quantization": "fp32",
+    "batch_size": 1,
+    "workload": "short",
+    "hardware": "cpu",
+    "measurement_method": "software"
+  },
+  "energy_boundary": "post-warmup inference including transfers; excludes load/tokenization",
+  "workloads": {
+    "short": [
+      "What is artificial intelligence?",
+      "Explain quantum computing in simple terms.",
+      "What is the capital of France?",
+      "What is renewable energy?",
+      "Define a computer algorithm.",
+      "What is photosynthesis?"
+    ],
+    "medium": [
+      "Explain the concept of machine learning and its applications.",
+      "Describe how neural networks work in deep learning.",
+      "What are the main differences between supervised and unsupervised learning?",
+      "Explain how renewable energy sources can reduce dependence on fossil fuels.",
+      "Describe how computer algorithms help solve everyday problems efficiently.",
+      "Explain how photosynthesis converts sunlight into energy that plants can use."
+    ],
+    "long": [
+      "Provide a comprehensive explanation of transformer architecture in natural language processing, including attention mechanisms and their applications.",
+      "Discuss the ethical implications of large language models and propose mitigation strategies for bias and misinformation.",
+      "Explain reinforcement learning from human feedback (RLHF) and its role in aligning AI systems with human values.",
+      "Discuss the benefits and limitations of solar and wind energy, including storage requirements and their integration into existing electrical grids.",
+      "Explain how algorithm design affects computational complexity, comparing common sorting algorithms and describing their practical advantages and limitations.",
+      "Provide a detailed explanation of photosynthesis, including the roles of chlorophyll, light-dependent reactions, and the Calvin cycle in plant growth."
+    ]
+  }
+}
